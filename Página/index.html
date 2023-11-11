@@ -1,0 +1,550 @@
+<html lang="pt-br">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PTI Webstandards - Maya Store</title>
+    <style>
+        html * {
+            font-family: 'Inter', Nunito, sans-serif;
+        }
+
+        /* Elementos do Cabeçalho */
+        header,
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: #581908;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2E0E02;
+        }
+
+        header li {
+            float: left;
+        }
+
+        header li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        header li a:hover {
+            background-color: #111;
+        }
+
+        header .logo {
+            padding: 20px 5px;
+        }
+
+        .menu {
+            padding: 20px 20px;
+        }
+
+        .busca {
+            display: flex;
+            padding: 0px 0px 0px 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header .container-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 800px) {
+            header .container-menu {
+                flex-direction: column;
+            }
+
+            header .logo,
+            .menu {
+                display: flex;
+                padding: 20px 0px 20px 20px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            header li {
+                float: none;
+            }
+        }
+
+        /* Elementos do Corpo */
+        h1 {
+            font-size: 26px;
+            color: white;
+        }
+
+        .section-sobre {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5em;
+            background-color: #983628;
+            text-align: left;
+        }
+
+        .section-sobre p {
+            color: #EBCBF4;
+            font-size: 20px;
+        }
+
+        .section-sobre .conteudo-sobre {
+            max-width: 50%;
+        }
+
+        .section-sobre .imagem-zen-sobre {
+            max-width: 50%;
+        }
+
+        .section-sobre .imagem-zen-sobre img {
+            border-style: solid;
+            max-width: 100%;
+        }
+
+        @media (max-width: 800px) {
+            .section-sobre .imagem-zen-sobre {
+                display: none;
+            }
+
+            .section-sobre .conteudo-sobre {
+                max-width: 100%;
+            }
+        }
+
+        .section-produtos {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5em;
+            background-color: #EBCBF4;
+            text-align: center;
+        }
+
+        .section-produtos .h4-1 {
+            color: #EBCBF4;
+            font-size: 24px;
+        }
+
+        .section-produtos .h4-2 {
+            color: #2E0E02;
+            font-size: 24px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-style: solid;
+            margin: 20px;
+            width: 40%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 70%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container-1 {
+            padding: 2px 16px;
+            background-color: #581908;
+        }
+
+        .container-2 {
+            padding: 2px 16px;
+            background-color: #E2AEDD;
+        }
+
+        @media (max-width: 900px) {
+            .section-produtos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .section-promocao {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5em;
+            background-color: #983628;
+            text-align: left;
+        }
+
+        .section-promocao .promocao {
+            background-color: 581908;
+            margin: 1em;
+            padding: 2em;
+            width: 100%;
+        }
+
+        .section-promocao p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .titulo-com-imagem-promocao {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .titulo-com-imagem-promocao h1 {
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+
+        .section-vantagens {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5em;
+            background-color: #2E0E02;
+            text-align: left;
+        }
+
+        .section-vantagens h1 {
+            color: #E2AEDD;
+        }
+
+        .bloco-vantagens {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .card-japamala {
+            border-style: solid;
+            border-color: white;
+            background-color: #E6D0DE;
+            padding: 10px 20px 0px 20px;
+            text-align: left;
+            min-width: 300px;
+            color: #2E0E02;
+            font-size: 22px;
+        }
+
+        .card-pulseira {
+            border-style: solid;
+            border-color: #E6D0DE;
+            padding: 10px 20px 0px 20px;
+            background-color: white;
+            text-align: left;
+            min-width: 300px;
+            color: #2E0E02;
+            font-size: 22px;
+        }
+
+        .card-aromaterapia {
+            border-style: solid;
+            border-color: white;
+            padding: 10px 20px 0px 20px;
+            background-color: #E6D0DE;
+            text-align: left;
+            min-width: 300px;
+            color: #2E0E02;
+            font-size: 22px;
+
+        }
+
+        @media (max-width: 1100px) {
+            .bloco-vantagens {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card-japamala,
+            .card-pulseira,
+            .card-aromaterapia {
+                width: 100%;
+                text-align: justify;
+            }
+        }
+
+        .section-cadastro {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5em;
+            background-color: #E2AEDD;
+            text-align: left;
+            justify-content: space-evenly;
+        }
+
+        .section-cadastro p,
+        .section-cadastro label {
+            color: #581908;
+        }
+
+        .section-cadastro input[type=submit] {
+            background-color: #2E0E02;
+            color: #E2AEDD;
+            padding: 10px 40px;
+            border-radius: 18px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .section-cadastro .formulario {
+            border-style: solid;
+            border-color: #983628;
+            max-width: 50%;
+            min-width: 40%;
+            padding-top: 5%;
+        }
+
+        .formulario label,
+        .formulario input[type=text],
+        .formulario p {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 7px;
+            text-align: left;
+            width: 80%;
+        }
+
+        .section-cadastro .bloco-nao-perca-tempo {
+            width: 50%;
+            color: #581908;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 800px) {
+            .section-cadastro {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .section-cadastro .bloco-nao-perca-tempo {
+                width: 80%;
+                align-items: left;
+                justify-content: left;
+            }
+
+            .section-cadastro .formulario {
+                max-width: 80%;
+                min-width: 60%;
+                padding-top: 5%;
+            }
+        }
+
+        footer {
+            color: #EBCBF4;
+        }
+
+        .loja-fisica-rodape {
+            margin-left: 5%;
+            margin-top: 5%;
+
+        }
+
+        .loja-fisica-rodape p {
+            margin: 0
+        }
+
+        .loja-fisica-rodape h1 {
+            margin: 0;
+            color: #EBCBF4;
+        }
+
+        .whatsapp-rodape {
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            margin-left: 5%;
+        }
+
+        .whatsapp-rodape img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-rodape p {
+            margin: 0
+        }
+
+        .redes-sociais-rodape {
+            margin-right: 5%;
+        }
+
+        .container-whatsapp-redes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 3%;
+            margin-bottom: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cabecalho/Maya.png" width="150" height="150">
+        </div>
+        <div class="container-menu">
+            <div class="busca">
+                <input type="search" placeholder="Search..">
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a class="active" href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#promocoes">Promoções</a></li>
+                        <li><a href="#vantagens">Vantagens</a></li>
+                        <li><a href="#cadastre">Cadastre-se</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="section-sobre">
+        <div class="conteudo-sobre">
+            <h1>Sobre nós</h1>
+            <p>A Maya Store existe com o desejo de trazer até você o melhor em Japamalas, pulseiras e artigos focados no
+                seu bem estar.</p>
+            <p>Nosso diferencial são os produtos feitos artesanalmente utilizando matérias de ótima qualidade. Tudo isso
+                imbuído de bons fluídos trazidos por nossa equipe de artesãos para ajudar a você alcançar um dia-a-dia
+                mais zen.</p>
+        </div>
+        <div class="imagem-zen-sobre">
+            <img src="images/sobre/zen.jpg">
+        </div>
+    </section>
+    <section class="section-produtos">
+        <div class="card">
+            <img src="images/produtos/japamala.jpg" alt="Japamala">
+            <div class="container-1">
+                <h4 class="h4-1"><b>Japamalas</b></h4>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/produtos/pulseira.jpg" alt="Pulseira">
+            <div class="container-2">
+                <h4 class="h4-2"><b>Pulseiras</b></h4>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/produtos/acessorios.jpg" alt="Acessorios">
+            <div class="container-1">
+                <h4 class="h4-1"><b>Acessórios</b></h4>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/produtos/aromaterapia.jpg" alt="Aromaterapia">
+            <div class="container-2">
+                <h4 class="h4-2"><b>Aromaterapia</b></h4>
+            </div>
+        </div>
+    </section>
+    <section class="section-promocao">
+        <div class="promocao">
+            <div class="titulo-com-imagem-promocao">
+                <img src="images/promo/g3.png" style="max-width: 7%" style="max-height: 7%;">
+                <h1>PROMOÇÃO!!!</h1>
+            </div>
+            <p>Para todos os novos clientes que preencheram o nosso cadastro na compra de 2 Japamalas ganha uma pulseira
+                especial de brinde além de Frete Grátis!!!</p>
+            <p>Corra e não pera a chance que é por tempo limitado!</p>
+        </div>
+    </section>
+    <section class="section-vantagens">
+        <h1>Por que investir no bem estar?</h1>
+        <div class="bloco-vantagens">
+            <div class="card-japamala">
+                <h4>Meditar com Japamalas</h4>
+                <ul>
+                    <li>Controle dos batimentos</li>
+                    <li>Maior Foco</li>
+                    <li>Aumento de concentração</li>
+                </ul>
+            </div>
+            <div class="card-pulseira">
+                <h4>Pulseira de pedras</h4>
+                <ul>
+                    <li>Atrai prosperidade</li>
+                    <li>Boas vibrações</li>
+                    <li>Positividade</li>
+                </ul>
+            </div>
+            <div class="card-aromaterapia">
+                <h4>Sobre Aromaterapia</h4>
+                <ul>
+                    <li>Reduz anseidade</li>
+                    <li>Melhora respiração</li>
+                    <li>Aumento da imunidade</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section-cadastro">
+        <div class="bloco-nao-perca-tempo">
+            <p><b>Faça o seu cadastro e não perca a nossa grande promoção. É por tempo limitado!!!</b></p>
+        </div>
+        <div class="formulario">
+            <p>Preencha com seus dados</p>
+            <form>
+                <label for="fnome">Nome</label>
+                <input type="text" id="fnome" name="nome" placeholder="Seu nome..">
+                <label for="femail">E-Mail</label>
+                <input type="text" id="femail" name="email" placeholder="Seu e-mail..">
+                <label for="fcpf">CPF</label>
+                <input type="text" id="fcpf" name="cpf" placeholder="Seu CPF..">
+                <label for="fcelular">Celular</label>
+                <input type="text" id="fcelular" name="celular" placeholder="Seu número de Celular..">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="loja-fisica-rodape">
+            <h1>Loja Física</h1>
+            <p>Av. Jabaquara 20000, São Paulo, SP</p>
+        </div>
+        <div class="container-whatsapp-redes">
+            <div class="whatsapp-rodape">
+                <img src="images/rodape/whatsapp.png" width="50" height="50">
+                <div style="margin-left: 20px;">
+                    <p>WhatsApp</p>
+                    <p>(11) 9 9999-9999</p>
+                    <p>(11) 9 9998-9998</p>
+                </div>
+            </div>
+            <div class="redes-sociais-rodape">
+                <img src="images/rodape/facebook.png" width="50" height="50">
+                <img src="images/rodape/instagram.png" width="50" height="50">
+                <img src="images/rodape/twitter.png" width="50" height="50">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
